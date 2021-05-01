@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import Index from "../views/index.vue";
+import PageOne from "../views/pages/page-one.vue";
 
 // 路由信息
 const routes = [
@@ -8,6 +9,13 @@ const routes = [
     path: "/",
     name: "Index",
     component: () => Index,
+    children: [
+      {
+        path: "/",
+        name: "PageOne",
+        component: () => PageOne,
+      },
+    ],
   },
 ];
 
