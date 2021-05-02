@@ -1,7 +1,7 @@
 <template>
   <div class="index">
     <el-container>
-      <el-aside width="200px">
+      <el-aside width="250px">
         <el-menu
           :uniqueOpened="true"
           default-active="2"
@@ -81,6 +81,14 @@ export default defineComponent({
   height: 100%;
   .el-container {
     height: 100%;
+  }
+  .el-main > div {
+    height: 100%;
+  }
+  .el-aside {
+    .el-menu {
+      height: 100%;
+    }
   }
 }
 </style>
